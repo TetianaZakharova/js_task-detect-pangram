@@ -18,8 +18,7 @@ function detectPangram(phrase) {
   const pangram = 'abcdefghijklmnopqrstuvwxyz';
 
   for (let i = 0; i < pangram.length; i++) {
-    if (!phrase.includes(pangram[i])
-    && !phrase.includes(pangram[i].toUpperCase())) {
+    if (!phrase.toLowerCase().includes(pangram[i])) {
       return false;
     }
   }
